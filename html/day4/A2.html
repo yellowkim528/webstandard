@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+    * { outline: 1px solid red; }
+    :root {
+      --bg-color-1: #452c54;
+      --bg-color-2: #5f3c73;
+      --bg-color-3: #754a8e;
+      --bg-color-4: #8b58a9;
+      --bg-color-5: #9d37b7;
+      --bg-color-6: #af8cc4;
+    }
+    .wrap {
+      display: grid;
+      grid-template-columns: 1fr 600px 1fr;
+      grid-template-rows: 50px 100px 50px minmax(100px, auto) 50px 70px;
+      grid-template-areas: 
+        "umm-l   umm   umm-r"
+        "hdr-l   hdr   hdr-r"
+        "gnb-l   gnb   gnb-r"
+        "main-l  main  main-r"    
+        "ftm-l   ftm   ftm-r"
+        "ft-l    ft    ft-r";
+    }
+    .wrap .item {
+      display: grid;
+      place-items: center;
+    }
+    
+    .wrap .item.umm-l{
+      background-color: var(--bg-color-1);
+    }
+    .wrap .item.umm-r{
+      background-color: var(--bg-color-1);
+    }
+    .wrap .item.umm {
+      background-color: var(--bg-color-2);
+    }
+    .wrap .item.main{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    .wrap .item.main{
+
+    }
+    a {
+      padding: 0px 10px;
+      text-decoration: none;
+      color: #fff;
+      line-height: 50px;
+    }
+    .wrap .item .menu {
+      margin: 0; padding: 0;
+      list-style: none;       /* 불릿 제거 */
+      display: flex;
+      justify-content: center;
+      height: 50px;
+      background-color: #555;
+    }
+    .wrap .item .menu .item:hover {
+      background-color: #222;
+      color: #ddd;
+    }
+    .wrap .item .menu .item:hover a{
+      color: #aaa;
+      
+    }
+    .wrap .item .menu .item {
+      display: flex;
+      width: 80px;
+      height: 100%;
+      posituon: relative;
+      justify-content: center;
+      
+      /* flex-grow: 1;
+      flex-shrink: 1; */
+    }
+    .wrap .item .menu .item a:hover::before {
+      content : " ";
+      display: block;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      border-radius: 50%;
+      top: 7px;
+      left: 3px;
+      background-color: #f00;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item umm-l">item1</div>
+    <div class="item umm">item2</div>
+    <div class="item umm-r">item3</div>
+    <div class="item hdr-l">item4</div>
+    <div class="item hdr">item5</div>
+    <div class="item hdr-r">item6</div>
+    <div class="item gnb-l">item7</div>
+    <div class="item gnb">
+      <ul class="menu">
+        <li class="item item1"><a href="https://www.naver.com">naver</a></li>
+        <li class="item item2"><a href="Q1.html">flex</a></li>
+        <li class="item item3"><a href="Q1_1.html">grid</a></li>
+        <li class="item item4"><a href="#">menu4</a></li>
+        <li class="item item5"><a href="#">menu5</a></li>
+      </ul>
+    </div>
+    <div class="item gnb-r">item9</div>
+    <div class="item main-l">item10</div>
+    <div class="item main">
+      <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis cupiditate blanditiis incidunt autem. Dolores consequuntur repellendus consectetur aliquid. Nihil quia praesentium suscipit maiores, placeat perspiciatis illo nostrum. Quos, perferendis nam?
+      Voluptates quasi, neque ipsum rem debitis magnam eveniet aperiam, deserunt animi officiis cupiditate, quae consequatur est quos minus. Totam, incidunt velit ea quod natus alias recusandae doloremque explicabo expedita nemo?</div>
+      <div class="sb">Sidebanner</div>
+      <div class="sm">SideMenu</div>
+    </div>
+    <div class="item main-r">item12</div>
+    <div class="item ftm-l">item13</div>
+    <div class="item ftm">item14</div>
+    <div class="item ftm-r">item15</div>
+    <div class="item ft-l">item16</div>
+    <div class="item ft">item17</div>
+    <div class="item ft-r">item18</div>
+  </div>
+</body>
+</html>

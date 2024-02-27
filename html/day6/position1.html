@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: 1px solid red;
+    }
+
+    body {
+      background-color: bisque;
+    }
+
+    nav {
+      width: 100%;
+      height: 50px;
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      height: 500px;
+      background-color: antiquewhite;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrap .box-wrap {
+      width: 400px;
+      height: 400px;
+      background-color: lightcyan;
+      position: relative;
+    }
+
+    .box {
+      position: static;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    .box.box1 {
+      background-color: #f00;
+      position: absolute;      
+      top: 0;
+      right: 0;
+    }
+
+    .box.box2 {
+      background-color: #0f0;
+      width: 150px;
+      position: fixed;
+      top: 200px;
+      right: 0;
+    }
+
+    .box.box3 {
+      background-color: #00f;
+      width: 200px;
+      position: sticky;   /* relative, fixed */
+      top: 100px;
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav>메뉴</nav>
+  <div class="wrap">
+    <div class="box-wrap">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+    </div>
+  </div>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit atque modi magnam ipsa doloribus fugit ipsum, corrupti suscipit neque recusandae ea facere in repellendus nemo odio ullam vel possimus expedita?
+  Vitae aut nulla deserunt veniam nobis nemo porro. Ipsam, quisquam veritatis! Cupiditate sapiente optio vitae. Dolorem quo, asperiores, fugiat ut optio cupiditate error laboriosam delectus, illum inventore debitis sapiente. Nemo.
+  Sint, nihil quae! At unde aspernatur mollitia fugit harum, labore, odit dolore, ut error amet excepturi ab molestias perspiciatis explicabo qui eum asperiores quis. Eligendi corrupti incidunt nam nostrum doloremque?
+  Ex, eveniet in. Magni repudiandae consequuntur amet quod magnam similique laboriosam eius culpa id, accusamus molestias unde fugit earum, porro doloribus necessitatibus aperiam ab maiores fugiat, optio cum itaque quasi.
+  Quos, enim. Ipsum laudantium, nesciunt voluptatum labore eaque ea aliquid amet tenetur error tempore, dicta iusto nostrum nisi, est provident at molestiae sunt voluptatem cupiditate ex consequatur quidem ratione aperiam?
+  Quia veniam minima vero aperiam distinctio aut deleniti magni provident sit ab accusantium dolore, repellat nostrum laborum adipisci. Dolorem harum corporis animi architecto numquam doloremque praesentium quibusdam porro cum ipsa.
+  Nostrum modi incidunt consequuntur in laudantium eveniet magni, architecto veniam fugit mollitia necessitatibus totam nemo quidem, doloribus harum nesciunt nobis maiores. Perspiciatis tempore deserunt, laudantium iure voluptatum velit a veniam.
+  Facilis nostrum neque dolor cumque accusamus veniam minima laudantium sint cum consequuntur provident optio at mollitia eius, temporibus aperiam suscipit laboriosam quas dolorum quaerat molestias, repudiandae est. Quibusdam, corrupti esse.
+  Autem nihil maxime eveniet alias optio ipsa praesentium perspiciatis exercitationem corrupti iure tenetur reprehenderit amet non nobis error inventore vero at quibusdam, laudantium molestias, a veritatis ipsum distinctio! Consequatur, et?
+  Cupiditate consectetur iusto sequi maxime repellat earum dolores unde explicabo suscipit totam modi magni, maiores at necessitatibus culpa dolor quos quia ipsum debitis recusandae dolore perferendis sapiente. Asperiores, veniam molestias! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit ullam consequuntur amet et ipsam odit voluptatum. Qui cupiditate ab voluptatibus doloremque modi consequatur facilis aspernatur id at sit? Laboriosam, libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iure dolores modi eum magni ea magnam fuga animi perspiciatis. Atque quia dolorem nobis consequuntur error illo, cum vel doloribus fuga?
+  Ipsum, omnis sapiente quasi cum eum fuga ducimus iure magnam laboriosam doloremque perferendis, repudiandae numquam obcaecati ratione repellendus consectetur exercitationem vitae eligendi. Reiciendis minus, adipisci ex at nihil optio vero?
+  Earum, officiis. Temporibus voluptates a cumque qui in tempora nisi odit quas, omnis recusandae suscipit eos sequi nesciunt dolor repudiandae asperiores fuga officia assumenda! Soluta numquam blanditiis repudiandae officia suscipit.
+  Porro fugit ipsa dolores deserunt dicta eum, iure esse possimus repudiandae cumque unde aspernatur at vel incidunt ab nesciunt voluptate recusandae sapiente accusamus ullam? Soluta culpa id ducimus repellat iusto.
+  Sequi, aliquam? Deserunt natus earum velit aliquid iste, repellendus, sapiente nihil eaque ad consequuntur consequatur neque sed vel enim magnam voluptatibus exercitationem perferendis illo reiciendis debitis accusamus ducimus id impedit!
+  Quam, sint! Praesentium, atque nobis, unde quisquam velit eaque excepturi eum alias harum voluptatum quas vel, aspernatur assumenda. Pariatur maxime quidem doloremque natus. Ducimus mollitia eveniet ratione tenetur vero. Voluptatibus.
+  Accusantium, similique exercitationem laboriosam non et eveniet nam magni repellendus eius doloribus ab repellat aliquid tenetur dolores sapiente sequi ullam ea animi, sunt, sit nemo facilis pariatur reprehenderit fugiat. Impedit?
+  Doloribus hic neque illo reiciendis modi distinctio dolores dignissimos officiis similique minus, cum pariatur eos odio totam nam sit assumenda sunt earum accusamus nulla! Quia fugiat sed laborum accusamus perferendis!</p>
+</body>
+
+</html>

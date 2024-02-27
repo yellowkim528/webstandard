@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학생 정보</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid #ddd;
+    background-color: #fff;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+</style>
+<body>
+
+<table id="studentsTable">
+  <thead>
+    <tr>
+      <th>이름</th>
+      <th>성별</th>
+      <th>키 (cm)</th>
+      <th>몸무게 (kg)</th>
+      <th>취미</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+const students = [
+  {name: '김철수', gender: '남', height: 170, weight: 65, hobby: '축구'},
+  {name: '이영희', gender: '여', height: 160, weight: 50, hobby: '독서'},
+  {name: '박지민', gender: '여', height: 165, weight: 55, hobby: '영화감상'},
+  {name: '최영수', gender: '남', height: 180, weight: 75, hobby: '등산'},
+  {name: '김민지', gender: '여', height: 158, weight: 48, hobby: '요리'}
+];
+
+const tbody = document.querySelector("#studentsTable tbody");
+
+students.forEach(student => {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${student.name}</td>
+    <td>${student.gender}</td>
+    <td>${student.height}</td>
+    <td>${student.weight}</td>
+    <td>${student.hobby}</td>
+  `;
+  tbody.appendChild(row);
+});
+</script>
+
+</body>
+</html>

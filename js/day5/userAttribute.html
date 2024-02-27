@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 사용자정의속성 -->
+  <!-- 'data' 로 시작해야한다.-->
+  <div id="user" data-id="123" data-user-name="'홍길동'" data-user-age="30">홍길동</div> 
+  <script>
+    const $user = document.getElementById('user');
+    // 사용자정의 속성에 접근할때는 element.dataset 로 접근
+    const id = $user.dataset.id;
+    const name = $user.dataset.userName;
+    const age = $user.dataset.userAge;
+    console.log(id,name,age);
+
+    $user.addEventListener('click',evt => {
+      $user.dataset.userAge = parseInt($user.dataset.userAge) + 1;
+      console.log(`${id}-${name}-${user.dataset.userAge}님 반갑습니다`)
+      $user.style.backgroundColor = `rgb(${parseInt($user.dataset.userAge)*5},${parseInt($user.dataset.userAge)*10},${parseInt($user.dataset.userAge)*15})`
+    })
+  </script>
+</body>
+</html>

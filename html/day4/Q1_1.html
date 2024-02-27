@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { outline: 1px solid red;}
+    :root {
+      --bg-color-1: #452c54;
+      --bg-color-2: #5f3c73;
+      --bg-color-3: #754a8e;
+      --bg-color-4: #8b58a9;
+      --bg-color-5: #9d37b7;
+      --bg-color-6: #af8cc4;
+    }
+    .container {
+      display: grid;
+      grid-template-colums: 1fr 3fr 1fr;
+      grid-template-rows: 50px 150px 50px 250px 50px 150px;
+      grid-template-areas:
+        "left1   um      right1"
+        "left2   header  right2"
+        "left3   nav     right3"
+        ".       main    ."
+        "left4   fm      right4"
+        "left5   footer  right5"
+    }
+    um {
+      grid-area: um;
+      background-color: var(--bg-color-1);
+      
+    }
+    .container>.um_left {
+      grid-area: left1;
+      background-color: var(--bg-color-2);
+    }
+    .container>.um_right {
+      grid-area: right1;
+      background-color: var(--bg-color-2);
+    }
+    header {
+      grid-area: header;
+      background-color: var(--bg-color-3);
+    }
+    .container>.hd_left {
+      grid-area: left2;
+      background-color: var(--bg-color-4);
+    }
+    .container>.hd_right {
+      grid-area: right2;
+      background-color: var(--bg-color-4);
+    }
+    nav {
+      grid-area: nav;
+      background-color: var(--bg-color-6);
+    }
+    .container>.nav_left {
+      background-color: var(--bg-color-5);
+    }
+    .container>.nav_right {
+      background-color: var(--bg-color-5);
+    }
+    main {
+      grid-area: main;
+      border: 10px solid #000;
+      box-sizing: border-box;
+    }
+    
+    .container>.con {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    fm {
+      grid-area: fm;
+      background-color: var(--bg-color-6);
+    }
+    .container>.fm_left {
+      grid-area: left4;
+      background-color: #ddc5eb;
+    }
+    footer {
+      grid-area: footer;
+      background-color: #ddc5eb;
+      
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <um>Uppermost Menu</um>
+    <div class="um_left"></div>
+    <div class="um_right"></div>
+    <div class="hd_left"></div>
+    <header>Header</header>
+    <div class="hd_right"></div>
+    <div class="nav_left"></div>
+    <nav>Nav</nav>
+    <div class="nav_right"></div>
+    <main class="con">
+      <div class="content">Content</div>
+      <div class="sidebanner">Sidebanner</div>
+      <div class="sidemenu">Sidemenu</div>
+    </main>
+    <div class="fm_left"></div>
+    <fm>Footer Menu</fm>
+    <div class="fm_right"></div>
+    <div class="footer_left"></div>
+    <footer>Footer</footer>
+    <div class="footer_right"></div>
+  </div>
+</body>
+</html>

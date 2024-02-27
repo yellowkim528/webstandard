@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemberJoin</title>
+  <style>
+    /* * {outline: 1px solid red;} */
+    form {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    form .wrap-box {
+      padding: 10px;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 80px 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "id     id-t"
+        "name   name-t"
+        "gender gender-t"
+        "pass   pass-t"
+        "pc     pc-t"
+        "email  email-t"
+        "ad     ad-t"
+        "ph     ph-t"
+        "hobby  hobby-c"
+        "intro  intro-t"
+      ;
+    }
+    form h3 {
+      padding: 5px;
+      align-items: center;
+    }
+    form label {
+      background-color: lightgrey;
+      outline: 5px solid #ffd6d6;
+      outline-style: ridge;
+    }
+    form div {
+      background-color: lightgrey;
+      outline: 5px solid #ffd6d6;
+      outline-style: ridge;
+    }
+    form label[for="id"]{
+      padding: 5px;
+      grid-area: id;
+    }
+    form .id-t {
+      padding: 5px;
+      grid-area: id-t;
+    }
+    form label[for="name"]{
+      padding: 5px;
+      grid-area: name;
+    }
+    form .name-t {
+      padding: 5px;
+      grid-area: name-t;
+    }
+    form label[for="gender"]{
+      padding: 5px;
+      grid-area: gender;
+    }
+    form .gender_radio {
+      padding: 5px;
+      grid-area: gender-t;
+    }
+    form label[for="pass"]{
+      padding: 5px;
+      grid-area: pass;
+    }
+    form .password {
+      padding: 5px;
+      grid-area: pass-t;
+    }
+    form label[for="pc"]{
+      padding: 5px;
+      grid-area: pc;
+    }
+    form .passcheck {
+      padding: 5px;
+      grid-area: pc-t;
+    }
+    form label[for="email"]{
+      padding: 5px;
+      grid-area: email;
+    }
+    form .email-box {
+      padding: 5px;
+      grid-area: email-t;
+    }
+    form label[for="address"]{
+      padding: 5px;
+      grid-area: ad;
+    }
+    form .address-box {
+      padding: 5px;
+      grid-area: ad-t;
+    }
+    form label[for="ph"]{
+      padding: 5px;
+      grid-area: ph;
+    }
+    form .number-box {
+      padding: 5px;
+      grid-area: ph-t;
+    }
+    form label[for="hobby"]{
+      padding: 5px;
+      grid-area: hobby;
+    }
+    form .hobby {
+      padding: 5px;
+    }
+    form label[for="intro"]{
+      padding: 5px;
+      grid-area: intro;
+      
+    }
+    
+    input[type="number"]{
+      width: 50px;
+    }
+    
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <form action="">
+      <h3>회원가입</h3>
+      <div class="wrap-box">
+          <label for="id">아이디</label>
+          <div class="id-t">
+            <input type="text">
+            <button>중복확인</button>
+          </div>
+          <label for="name">이름</label>
+          <div class="name-t">
+            <input type="text">
+          </div>
+          <label for="gender">성별</label>
+          <div class="gender_radio">
+            <input type="radio" name="men" id="">남
+            <input type="radio" name="women" id="">여
+          </div>
+          <label for="pass">암호</label>
+          <div class="password">
+            <input type="password" name="pass-t" id="">
+          </div>
+          <label for="pc">암호확인</label>
+          <div class="passcheck">
+            <input type="password" name="pc" id="">
+            *같은 암호를 입력하세요
+          </div>
+          <label for="email">이메일</label>
+          <div class="email-box">
+            <input type="text">@
+            <input type="text">
+            <select name="email" id="">
+              <option disabled selected>  </option>
+              <option value="naver">naver.com</option>
+              <option value="google">google.com</option>
+              <option value="hanmail">hanmail.net</option>
+              <option value="nate">nate.com</option>
+              <option value="self">직접입력</option>
+            </select>
+          </div>
+          <label for="address">주소</label>
+          <div class="address-box">
+            <input type="text" name="address" id="">
+            <button>주소찾기</button>
+          </div>
+          <label for="ph">휴대폰</label>
+          <div class="number-box">
+            <input type="radio" name="SKT" id="">SKT
+            <input type="radio" name="KT" id="">KT
+            <input type="radio" name="LGU+" id="">LGU+
+            <br>
+            <select name="num" id="">
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="012">012</option>
+              <option value="019">019</option>
+            </select>
+            -
+            <input type="number" name="sec-num" id="">
+            -
+            <input type="number" name="trd-num" id="">
+          </div>
+          <label for="hobby">관심</label>
+          <div class="hobby">
+            <input type="checkbox" name="hobby1" id="">쇼핑
+            <input type="checkbox" name="hobby2" id="">게임
+            <input type="checkbox" name="hobby3" id="">여행
+            <input type="checkbox" name="hobby4" id="">기타
+          </div>
+          <label for="intro">자기소개</label>
+          <div class="textarea">
+            <textarea name="intro" id="" cols="60" rows="10">
+            </textarea>
+          </div>
+        </div>
+    </form>
+  </div>
+</body>
+</html>

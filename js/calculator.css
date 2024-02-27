@@ -1,0 +1,47 @@
+.grid-wrap {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  
+}
+.cal-wrap{
+  padding: 15px;
+  display: grid;
+  border: 1px solid #524e4e;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-row-gap: 10px;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+input {
+  text-align: right;
+  width: 185px;
+  height: 40px;
+  display: grid;
+  font-size: 16pt;
+  
+}
+.input-warp {
+  display: gird;
+  grid-column: 1/5;
+  grid-row : 1/2;
+}
+button {
+  font-size: 15pt;
+  width: 40px;
+  height: 50px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+}
+.btn-wrap {
+  padding: 3px;
+  display: grid;
+}
+.on{
+  background-color: yellow;
+}

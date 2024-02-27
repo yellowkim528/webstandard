@@ -1,0 +1,158 @@
+*{
+  /* outline: 1px solid red; */
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+  display: grid;
+  grid-template-row: 50px 800px;
+}
+.wrap .content {
+  display: grid;
+  justify-content: center;
+}
+.wrap .content .content-wrap{
+  display: grid;
+  grid-template-rows: 150px 50px 1fr
+}
+
+/* 최상위 메뉴 (로그인|회원가입) */
+.wrap .uppermostMenu {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  justify-content: flex-end;
+}
+p {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0;
+  padding-right: 150px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  /* color: white; */
+}
+
+/* Header (고양이사진)*/
+header {
+  width: 600px;
+  height: 150px;
+}
+.wrap .content .content-wrap .img-wrap {
+  background-image: url('https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_640.jpg');
+  background-size: auto;
+  background-position: center;
+  width: 600px;
+  height: 150px;
+}
+
+
+/*메인 메뉴*/
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+nav {
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+.wrap .content .content-wrap .menu{
+  list-style: none;
+  padding: 0;
+  height: 50px;
+  /* padding: 0; */
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-direction: column; */
+  background-color: black;
+}
+.wrap .content .content-wrap .menu > .item {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+}
+.wrap .content .content-wrap .menu > .item:hover {
+  background-color: rgb(48, 48, 48);
+}
+
+
+
+/*회원가입 양식*/
+main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  
+}
+.wrap .content .content-wrap .main1 {
+  background-color: lightskyblue;
+}
+.wrap .content .content-wrap .main2 {
+  display: grid;
+  justify-content: center;
+  background-color: lightcyan;
+}
+form {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  ;
+}
+form h3 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.wrap .content .content-wrap .main2 .form-wrap {
+  padding: 20px;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+select {
+  width: 90px;
+}
+
+input {
+  padding: 0.3px;
+}
+label {
+  padding: 0.3px;
+}
+button {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+}
+
+
+/*Footer*/
+footer {
+  display: flex;
+  width: 600px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(113, 140, 145);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}

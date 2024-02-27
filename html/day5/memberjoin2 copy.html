@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemberJoin_2</title>
+  <script src="https://kit.fontawesome.com/a1b3b61744.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    }
+    /* *{outline: 1px solid green;} */
+
+    /* 공통 */
+    .btn {
+      background-color: #3F6B78;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-weight: 400;
+      font-family: inherit;
+      font-size: large;
+    }
+
+    /* 전체 */
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 회원 가입 부문 */
+    .wrap .member_join-wrap {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+    }
+    /* 회원가입 타이틀 */
+    .wrap .member_join-wrap .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: .2rem;
+    }
+    .wrap .member_join-wrap .title h2 {
+      font-family: 'Dongle', sans-serif;
+      box-shadow: 3px 3px 3px 0px #555a;
+      font-weight: 600;
+     }
+    /* 회원 가입 양식 */
+    .wrap .member_join-wrap .member_join .join_frm {
+      display: grid;
+      grid-template-columns: 100px auto;
+      grid-template-rows: repeat(11,auto);
+      gap: 2px;
+      padding: 2px;
+      box-sizing: border-box;
+      background-color: #E3FFC8;
+      text-transform: capitalize;
+      font-family: 'Dongle', sans-serif;
+      font-size: larger;
+    }
+    .wrap .member_join-wrap .member_join .join_frm > div {
+      padding: 0px 5px;
+      border: 1px solid #222;
+      background-color: snow;
+    }
+    
+
+    /* 회원 가입 버튼 그룹 */
+    .wrap .member_join-wrap .member_join .join_frm > div.btn_grp {
+      display: flex;
+      justify-content: center;
+      grid-row: 11/12;
+      grid-column: 1/3;
+      border: 0px;
+      padding-top: 10px;
+    }
+    .wrap .member_join-wrap .member_join .join_frm > div.btn_grp input[type="button"] {
+      margin-right: 3px;
+    }
+    .wrap .member_join-wrap .member_join .join_frm > div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    /* 폰트 어썸 */
+    .fa-regular.fa-envelope {
+      color: chocolate;
+      font-size: larger;
+    }
+    .fa-solid.fa-mobile-retro {
+      color: chocolate;
+      font-size: larger;
+
+    }
+    /* 배너 배경이미지 */
+    .wrap .banner {
+      background-image: url('https://cdn.pixabay.com/photo/2016/03/07/10/32/color-1241879_1280.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 600px;
+      height: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="banner"></div>
+    <div class="member_join-wrap">
+      <div class="title">
+        <h2>회원가입</h2>
+      </div>
+      <div class="member_join">
+        <form action="" class="join_frm">
+          <div><label for="id">아이디</label></div>
+          <div>
+            <input type="text" id="id">
+            <input class="btn" type="button" value="중복확인">
+          </div>
+          <div><label for="name">이름</label></div>
+          <div><input type="text" id="name"></div>
+          <div><label for="">성별</label></div>
+          <div>
+            <input type="radio" name="gender" id=""><label for="">남</label>
+            <input type="radio" name="gender" id=""><label for="">여</label>
+          </div>
+          <div><label for="pwd">암호</label></div>
+          <div><input type="password" id="pwd"></div>
+          <div><label for="pwdchk">암호확인</label></div>
+          <div><input type="password" id="pwdchk"><span>*같은 암호를 입력하세요</span></div>
+          <div><label for="email">이메일</label></div>
+          <div><input type="text" id="email">@<input type="text">
+            <select name="" id="">
+              <option value="">naver.com</option>
+              <option value="" selected>gmail.com</option>
+              <option value="">hotmail.com</option>
+            </select>
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div><label for="addr">주소</label></div>
+          <div>
+            <input type="text" id="addr">
+            <input class="btn" type="button" value="주소찾기">
+          </div>
+          <div><label for="mobile">휴대폰</label></div>
+          <div>
+            <div>
+              <input type="radio" name="mobile" id="mobile"><label for="">SKT</label>
+              <input type="radio" name="mobile" id=""><label for="">KT</label>
+              <input type="radio" name="mobile" id=""><label for="">LGU+</label>
+            </div>
+            <div>
+              <select name="" id="">
+                <option value=""selected>010</option>
+                <option value="">016</option>
+                <option value="">018</option>
+              </select>
+              <input type="text">-<input type="text">
+              <i class="fa-solid fa-mobile-retro"></i>
+            </div>
+          </div>
+          <div><label for="">관심</label></div>
+          <div>
+            <input type="checkbox" name="" id=""><label for="">쇼핑</label>
+            <input type="checkbox" name="" id=""><label for="">게임</label>
+            <input type="checkbox" name="" id=""><label for="">여행</label>
+            <input type="checkbox" name="" id=""><label for="">기타</label>
+          </div>
+          <div><label for="intro">자기소개</label></div>
+          <div><textarea id="intro" style="box-sizing:border-box; width: 100%; height: 100px;"></textarea></div>
+          <div class="btn_grp">
+            <input class="btn" type="button" value="확인"><input class="btn" type="reset" value="다시입력">
+            <button class="btn"><i class="fa-brands fa-youtube"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

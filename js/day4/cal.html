@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간단한 계산기</title>
+  <style>
+    .calculator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .row button {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      margin: 0 5px;
+    }
+
+    #result {
+      width: 206px;
+      height: 40px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input id="result" type="text" readonly> 
+    <div class="row">
+      <button>1</button><button>2</button><button>3</button><button>+</button>
+    </div>
+    <div class="row">
+      <button>4</button><button>5</button><button>6</button><button>-</button>
+    </div>
+    <div class="row">
+      <button>7</button><button>8</button><button>9</button><button>*</button>
+    </div>
+    <div class="row">
+      <button>0</button><button>/</button><button>AC</button><button>=</button>
+    </div>
+  </div>
+  
+  <script>
+    const $btns = document.querySelectorAll('button');
+    const $result = document.getElementById('result');
+
+    $btns.forEach(ele => {
+      ele.addEventListener('click', evt => {
+        const btnValue = evt.target.textContent;
+        if (btnValue === '=') {
+          calculate();
+        } else if (btnValue === 'AC') {
+          clearResult();
+        } else {
+          $result.value += btnValue;
+        }
+      });
+    });
+
+    document.addEventListener('keydown', evt => {
+      const key = evt.key;
+      if (/[0-9+\-*/=]|Backspace|Enter/.test(key)) {
+        evt.preventDefault();
+        if (key === '=') {
+          calculate();
+        } else if (key === 'Backspace') {
+          clearResult();
+        } else {
+          $result.value += key;
+        }
+      }
+    });
+
+    function calculate() {
+      if ($result.value) {
+        $result.value = eval($result.value);
+      }
+    }
+
+    function clearResult() {
+      $result.value = '';
+    }
+  </script>
+</body>
+</html>

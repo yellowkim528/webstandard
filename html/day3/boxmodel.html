@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model</title>
+    <style>
+        span.g1{
+            display: block;
+            box-sizing: content-box;    /*content를 부각시킬 때 (default) */
+            width: 150px;
+            height: 100px;
+            background-color: blanchedalmond;
+            padding: 10px;
+            border: 5px solid firebrick;
+        }
+        span.g2{
+            display: block;
+            box-sizing: border-box;     /*Layout이 중요할 때*/
+            width: 150px;
+            height: 100px;
+            background-color: blanchedalmond;
+            padding: 10px;
+            border: 5px solid firebrick;
+        }
+
+    </style>
+</head>
+<body>
+    <span class="g1">홍길동</span>
+    <span class="g2">홍길순</span>
+</body>
+</html>

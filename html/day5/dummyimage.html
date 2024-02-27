@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      /* outline: 1px solid red; */
+    }
+    body{
+      box-sizing: border-box;
+    }
+    .wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .cont {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: repeat(3, 200px);
+      gap: 10px;
+      padding: 10px;
+      width: 620px;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(90deg, #FBEAFF 0%, #B39CD0);
+      
+    }
+    .cont .item {
+      /* border-radius: 50%; */
+    }
+    .cont .item img {
+      border-radius: 50%;
+    }
+    .cont .item img:hover{
+      transform: scale(1.5);
+      transition: all ease 0s;
+      z-index: 5;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="cont">
+      <div class="item"><img src="https://picsum.photos/id/21/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/22/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/23/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/24/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/25/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/26/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/27/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/28/200/200" alt=""></div>
+      <div class="item"><img src="https://picsum.photos/id/29/200/200" alt=""></div>
+    </div>
+  </div>
+  
+</body>
+</html>
